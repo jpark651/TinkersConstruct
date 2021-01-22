@@ -99,21 +99,21 @@ public abstract class TinkersItem extends Item implements ITinkerable, IModifyab
     return true;
   }
 
-  @Nonnull
-  @Override
-  public Entity createEntity(World world, Entity location, ItemStack itemstack) {
-    EntityItem entity = new IndestructibleEntityItem(world, location.posX, location.posY, location.posZ, itemstack);
-    if(location instanceof EntityItem) {
-      // workaround for private access on that field >_>
-      NBTTagCompound tag = new NBTTagCompound();
-      location.writeToNBT(tag);
-      entity.setPickupDelay(tag.getShort("PickupDelay"));
-    }
-    entity.motionX = location.motionX;
-    entity.motionY = location.motionY;
-    entity.motionZ = location.motionZ;
-    return entity;
-  }
+//  @Nonnull
+//  @Override
+//  public Entity createEntity(World world, Entity location, ItemStack itemstack) {
+//    EntityItem entity = new IndestructibleEntityItem(world, location.posX, location.posY, location.posZ, itemstack);
+//    if(location instanceof EntityItem) {
+//      // workaround for private access on that field >_>
+//      NBTTagCompound tag = new NBTTagCompound();
+//      location.writeToNBT(tag);
+//      entity.setPickupDelay(tag.getShort("PickupDelay"));
+//    }
+//    entity.motionX = location.motionX;
+//    entity.motionY = location.motionY;
+//    entity.motionZ = location.motionZ;
+//    return entity;
+//  }
 
   /* Building the Item */
   public boolean validComponent(int slot, ItemStack stack) {
