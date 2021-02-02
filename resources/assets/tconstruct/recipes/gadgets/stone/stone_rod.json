@@ -14,16 +14,12 @@
         "A": [
             {
                 "type": "forge:ore_dict",
-                "ore": "cobblestone"
-            },
-            {
-                "type": "forge:ore_dict",
                 "ore": "stone"
             }
         ]
     },
     "result": {
         "item": "tconstruct:stone_stick",
-        "count": 4
+        "count": 1
     }
 }
